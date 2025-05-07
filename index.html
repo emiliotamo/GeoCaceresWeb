@@ -31,11 +31,11 @@
         <div class="right-part">
             <div class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#about">Inicio</a></li>
                     <li><a href="#tour">Que visitar</a></li>
                     <li><a href="#media">Media</a></li>
                     <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a></li>
                 </ul>
                 <div class="btn-group">
                     <a href="#" class="btn btn-try">
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <button class="btn btn-view-all">
-                View More
+                Ver más
             </button>
         </section>
 
@@ -160,7 +160,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <span>View Route Map</span>
+                            <span>Ver ruta en el Mapa</span>
                         </a>
                         <div class="price">
                             
@@ -194,7 +194,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <span>View Route Map</span>
+                            <span>Ver ruta en el Mapa</span>
                         </a>
                         <div class="price">
                             <p>$220 <span>Por persona</span></p>
@@ -227,7 +227,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <span>View Route Map</span>
+                            <span>Ver ruta en el mapa</span>
                         </a>
                         <div class="price">
                             <p>15€ <span>Por persona</span></p>
@@ -238,7 +238,7 @@
                 <!-- ------ -->
             </div>
             <button class="btn btn-view-all">
-                View More
+               Ver más
             </button>
         </section>
 
@@ -270,6 +270,33 @@
 
             </div>
         </section>
+            <!-- ----- -->
+             <!-- Asistente -->
+
+
+<section>
+    <div class="main-text">
+        <h2>¿Aún no has visto esto?</h2>
+        <h1>Asistente<span> V</span>irtual</h1>
+        <p>Descubre Cáceres con nuestro Asistente Virtual</p>
+        
+        <p>Tu guía inteligente en la ciudad. Con solo unos clics, localiza fácilmente farmacias de guardia, estancos, puntos limpios, hoteles, restaurantes, oficinas de turismo y mucho más. Disponible las 24 horas, nuestro asistente virtual está diseñado para hacer tu estancia más cómoda, segura y organizada.
+            Ya seas visitante o residente, tendrás toda la información útil de Cáceres en la palma de tu mano, siempre actualizada y al instante.
+            
+            </p>
+    </div>
+    <div class="main-container">
+        <video
+            src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-lush-river-valley-and-snowy-mountains-15919-large.mp4"
+            autoplay loop muted></video>
+    </div>
+
+</section><button class="btn btn-view-all">
+    Ir al asistente
+ </button>
+
+</section>
+
 
         <!-- ----- -->
         <!-- media  -->
@@ -277,7 +304,7 @@
         <section class="media" id="media">
             <div class="main-text">
                 <h2>Media</h2>
-                <h1>Iceland in Footage</h1>
+                <h1>Cáceres en fotos</h1>
             </div>
             <div class="main-container">
                 <div class="image image-1">
@@ -348,18 +375,22 @@
         <!-- contact  -->
         <section class="contact" id="contact">
             <div class="main-text">
-                <h2>Contact</h2>
-                <h1>Get in touch</h1>
+                <h2>Contacto</h2>
+                <h1>Registrate aquí</h1>
             </div>
             <div class="main-container">
                 <form action="#">
                     <div class="name">
-                        <label for="name">Name</label>
-                        <input type="text" placeholder="Enter Your name " id="name" name="name">
+                        <label for="name">Nombre</label>
+                        <input type="text" placeholder="Introduce tu nombre " id="name" name="name">
                     </div>
                     <div class="phone">
-                        <label for="phone">Email or Phone</label>
-                        <input type="text" name="phone" id="phone" placeholder="Enter Your Number or phone">
+                        <label for="phone">Email</label>
+                        <input type="text" name="phone" id="phone" placeholder="Introduce tu email">
+                    </div>
+                    <div class="phone">
+                        <label for="phone">Télefono</label>
+                        <input type="text" name="phone" id="phone" placeholder="Introduce tu teléfono">
                     </div>
                     <div class="message">
                         <label for="message">Your message</label>
@@ -436,6 +467,43 @@
     <!-- ----- -->
 
     <script src="public/js/main.js"></script>
+
+
+<!-- Modal Login -->
+<div id="loginModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="return loginUser()">
+            <input type="text" id="username" placeholder="Usuario" required><br>
+            <input type="password" id="password" placeholder="Contraseña" required><br>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </div>
+</div>
+
+
+
+<script>
+function loginUser() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+
+    // Aquí podrías hacer una petición a tu backend
+    if (user === "demo" && pass === "1234") {
+        localStorage.setItem("usuario", user);
+        alert("Sesión iniciada correctamente");
+        document.getElementById('loginModal').style.display = 'none';
+    } else {
+        alert("Usuario o contraseña incorrectos");
+    }
+    return false;
+}
+</script>
+
+
+
 </body>
 
 </html>
