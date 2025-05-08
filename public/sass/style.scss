@@ -402,7 +402,7 @@ li{
             align-items: center;
             gap: 0.5rem;
             cursor: pointer;
-            .line{
+            .linea{
                 width: 35px;
                 height: 0.6rem;
                 background-color: $tc;
@@ -412,7 +412,7 @@ li{
         }
 
         .ham-menu.active{
-            .line{
+            .linea{
                 transform-origin: 10px 3px;
 
                 &-1{
@@ -600,7 +600,7 @@ li{
             }
 
 
-            .price{
+            .precio{
                 width: 100%;
                 max-width: 500px;
                 cursor: pointer;
@@ -691,7 +691,7 @@ li{
             font-size: 1.4rem;
         }
     }
-    .price {
+    .precio {
         width: 100%;
         max-width: 500px;
         cursor: pointer;

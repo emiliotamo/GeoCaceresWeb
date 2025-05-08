@@ -37,23 +37,7 @@ li {
   list-style: none;
 }
 
-#preloadder {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: hsl(0deg, 0%, 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../images/preloadder/loader.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 35%;
-  z-index: 99999;
-}
+
 
 .btn {
   color: hsl(0deg, 0%, 100%);
@@ -364,7 +348,7 @@ li {
 
 .banner {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1547626740-02cb6aed9ef8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1673467340628-2X7S5T9QYH41UK8NC1C2/que-ver-en-caceres.jpg?format=1500w");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -535,7 +519,7 @@ li {
 }
 
 .sale {
-  background: linear-gradient(to top left, rgba(17, 97, 106, 0.3), rgba(255, 255, 255, 0)), url("https://images.unsplash.com/photo-1488415032361-b7e238421f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+  background: linear-gradient(to top left, rgba(17, 97, 106, 0.3), rgba(255, 255, 255, 0)), url("https://i0.wp.com/xn--lacompaialibredebraavos-yhc.com/wp-content/uploads/2018/05/Arco-de-la-Estrella-Caceres.jpg?fit=1018%2C522&ssl=1");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -728,7 +712,7 @@ footer {
 footer .footer-image {
   width: 100%;
   height: 80vh;
-  background: url("https://images.unsplash.com/photo-1510437097452-74ac66e27feb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80");
+  background: url("https://turismo.caceres.es/sites/default/files/multimedia/caceresCH_1024x366.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -863,9 +847,7 @@ footer .credit a {
 }
 
 @media (min-width: 868px) {
-  #preloadder {
-    background-size: 15%;
-  }
+ 
   .primary-header {
     padding: 1rem 6rem;
     gap: 2rem;
@@ -924,29 +906,48 @@ footer .credit a {
 
 
 .modal {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  position: fixed; z-index: 9999; left: 0; top: 0;
+  width: 100%; height: 100%; overflow: auto;
   background-color: rgba(0,0,0,0.5);
 }
-
 .modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
+  position: absolute; background-color: #fff;
+  margin: auto; padding: 20px 30px;
+  border: 1px solid #ccc; width: 400px;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+.modal-header {
+  display: flex; justify-content: space-between;
+  align-items: center; cursor: move; margin-bottom: 15px;
+}
+.modal-content h2 {
+  margin: 0; font-size: 24px; color: #333;
+}
+input[type="text"], input[type="password"] {
+  width: 100%; padding: 12px; margin: 10px 0;
+  box-sizing: border-box; border-radius: 8px;
+  border: 1px solid #aaa;
+}
+.close {
+  float: right; font-size: 22px; cursor: pointer; color: #333;
+}
+.btn-send {
+  margin-top: 2rem; padding: 1rem 4rem; border: none;
+  cursor: pointer; background-color: hsl(167deg, 82%, 65%);
+  color: hsl(198deg, 100%, 6%); font-weight: 700;
+  font-size: 1.6rem; transition: all 350ms ease-in-out;
+}
+.modal-content p {
+  text-align: center; margin-top: 15px;
+  color: #333; font-size: 14px;
+}
+.modal-content a {
+  color: hsl(167deg, 82%, 65%);
+  text-decoration: none; font-weight: bold;
+}
+.modal-content a:hover {
+  text-decoration: underline;
 }
 
-.close {
-  float: right;
-  font-size: 22px;
-  cursor: pointer;
-  color: #333;
-}
 
