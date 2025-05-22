@@ -4,15 +4,21 @@ const cors = require('cors');
 const axios = require('axios');
 const path = require('path');
 
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// 💾 Conexión a base de datos (Render)
+const db = require('./db/client');
+
+// 🔌 Rutas externas (usuarios)
+const usuariosRoutes = require('./routes/usuarios');
+
 // Validación de la API Key
 if (!process.env.OPENAI_API_KEY) {
   console.error("❌ Falta la variable de entorno OPENAI_API_KEY.");
   process.exit(1);
 }
-
-const app = express();
-app.use(cors());
-app.use(express.json());
 
 // ----- API Proxy -----
 class ApiService {
@@ -43,9 +49,7 @@ class ApiService {
 
 const apiService = new ApiService(process.env.OPENAI_API_KEY);
 
-// ----- Rutas del servidor -----
-
-// Archivos estáticos
+// ----- Archivos estáticos -----
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Página principal (GeoCaceres)
@@ -58,7 +62,7 @@ app.get('/asistente', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'asistente', 'asistente.html'));
 });
 
-// API del asistente
+// ----- API del asistente -----
 app.post('/api/sendMessage', async (req, res) => {
   try {
     const { message, threadId } = req.body;
@@ -83,6 +87,12 @@ app.post('/api/sendMessage', async (req, res) => {
     res.status(500).json({ assistant: 'Error interno del servidor' });
   }
 });
+
+// 🔄 Rutas de la base de datos
+app.use('/api/usuarios', usuariosRoutes);
+const reservasRoutes = require('./routes/reservas');
+app.use('/api/reservas', reservasRoutes);
+
 
 // ----- Iniciar servidor -----
 const port = 3000;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservar Servicio</title>
+  <link rel="stylesheet" href="/sass/style.css"> <!-- Tu CSS, si usas uno -->
+</head>
+<body>
+  <section class="reserva">
+    <h1>Haz tu reserva</h1>
+
+    <form id="formReserva">
+      <label for="servicio_id">Selecciona un servicio:</label>
+      <select id="servicio_id" name="servicio_id" required>
+        <option value="1">Tour por Cáceres</option>
+        <option value="2">Tour Juego de Tronos</option>
+        <option value="3">Menú en Restaurante</option>
+        <option value="4">Entrada a Museo</option>
+        <!-- Puedes cargar esto dinámicamente con fetch también -->
+      </select>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit" id="botonReservar">Reservar</button>
+    </form>
+  </section>
+
+  <script src="/js/reserva.js"></script>
+</body>
+</html>

@@ -950,4 +950,16 @@ input[type="text"], input[type="password"] {
   text-decoration: underline;
 }
 
+.mensaje-estado {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.mensaje-estado.error {
+  color: red;
+}
+
+.mensaje-estado.success {
+  color: green;
+}
 
