@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCaceres</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- css  -->
+    <link rel="stylesheet" href="sass/style.css">
+
+</head>
+
+<body>
+    
+   <!-- header  -->
+<header class="primary-header">
+    <div class="left-part">
+        <img src="public/images/logo/logo-caceres.png" alt="">
+        <div class="logo">
+            <h1><span>Geo</span>Caceres</h1>
+        </div>
+    </div>
+    <div class="right-part">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#tour">¿Qué visitar?</a></li>
+                <li><a href="#asistente">Asistente Virtual</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a></li>
+            </ul>
+            <div class="btn-group">
+                <a href="asistente/asistente.html" class="btn btn-try">
+                    <span>Ir al asistente virtual</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="ham-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+    </div>
+</header>
+
+
+    <!-- main  -->
+    <main>
+
+        <!-- banner  -->
+
+        <section class="banner" id="banner">
+            <div class="banner-text">
+                
+                <h1>Geo Caceres</h1>
+                <P>Brindamos información completa y actualizada sobre turismo, alojamiento y eventos en la ciudad de Cáceres. Nuestro servicio incluye también asistentes virtuales especializados, disponibles para orientar y acompañar a los visitantes durante su estancia, facilitando el acceso a experiencias culturales, gastronómicas y de ocio que ofrece esta ciudad histórica.</P>
+                <a href="#" class="btn btn-get"><span>Explore</span></a>
+            </div>
+            <div class="overlay2">
+
+            </div>
+        </section>
+
+        <!-- explore  -->
+        <section class="explore" id="explore">
+            <div class="main-text">
+                <h2>Visita</h2>
+                <h1><span>C</span>áceres</h1>
+                <p><p>Cáceres maravilla a sus visitantes con su impresionante casco histórico, sus monumentos medievales y un entorno perfecto para visitar.</p></p>
+            </div>
+            <div class="main-container">
+                <div class="image-box image-1">
+                    <img src="https://espanaxdescubrir.com/wp-content/uploads/2020/05/Ciudad-C%C3%A1ceres-Web-1.jpg"
+                        alt="">
+                    <div class="overlay"></div>
+                    <div class="image-box-text">
+                        <h2> Plaza Mayor</h2>
+                        <p>Antigua plaza del mercado</p>
+                    </div>
+                </div>
+                <div class="image-box image-1">
+                    <img src="https://www.barcelo.com/guia-turismo/wp-content/uploads/ok-torre-de-bujaco.jpg"
+                        alt="">
+                    <div class="overlay"></div>
+                    <div class="image-box-text">
+                        <h2>Torre de Bujaco</h2>
+                        <p>Vistas únicas de la Plaza Mayor</p>
+                    </div>
+                </div>
+                <div class="image-box image-1">
+                    <img src="https://concatedralcaceres.com/wp-content/uploads/20220801_ConcatedralCaceres_-38-2.jpg"
+                        alt="">
+                    <div class="overlay"></div>
+                    <div class="image-box-text">
+                        <h2>Concatedral de Santa María</h2>
+                        <p>Joya del gótico y renacimiento cacereño</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-view-all">
+                Ver más
+            </button>
+        </section>
+
+        <!--   -->
+        <section class="" id="">
+            <div class="main-text">
+                <h2>Sobre nosotros</h2>
+                <h1>Sensaciones<span> I</span>nolvidables</h1>
+                <p>La experiencia Cáceres es una forma única de descubrir los rincones más emblemáticos de esta ciudad histórica. Te ayudamos a planificar tu viaje ideal: encontrar los mejores alojamientos, acceder a información turística actualizada y disfrutar de cada momento sin preocupaciones. Nada te impedirá sumergirte en la magia de Cáceres, donde la historia y la cultura cobran vida.</p>
+            </div>
+            <div class="main-container">
+                <video
+                    src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-lush-river-valley-and-snowy-mountains-15919-large.mp4"
+                    autoplay loop muted></video>
+            </div>
+
+        </section>
+
+        <!-- Hoteles, turismo y gastronomía -->
+
+        <section class="tour" id="tour">
+            <div class="main-text">
+                <h2>Te recomendamos</h2>
+                <h1>Hoteles, turismo y gastronomía</h1>
+            </div>
+            <div class="main-container">
+                <!-- // card 1 -->
+                <div class="tour-cards">
+                    <div class="image-box">
+                        <img src="https://y.cdrst.com/foto/hotel-sf/1213fdbb/granderesp/foto-hotel-1213f311.jpg"
+                            alt="hotel1">
+                        <div class="overlay"></div>
+                        <div class="image-box-text">
+                            <h2>Gran Hotel Don Manuel</h2>
+                            <p>Hotel elegante</p>
+                        </div>
+
+                    </div>
+                    <div class="tour-cards-text">
+                        <h1>Gran Hotel Don Manuel </h1>
+                        <p>El Gran Hotel Don Manuel es un elegante hotel de 4 estrellas situado en el corazón de Cáceres, a tan solo 300 metros de la Plaza Mayor y del conjunto histórico declarado Patrimonio de la Humanidad por la UNESCO . Su ubicación privilegiada permite a los huéspedes explorar fácilmente los principales atractivos turísticos de la ciudad.
+                        </p>
+                        <a href="#" class="btn-map">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Ver ruta en el Mapa</span>
+                        </a>
+                        <div class="price">
+                            
+                            <p>150€ <span>Por persona</span></p>
+                            <h2>Un fin de semana</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ------ -->
+                <!-- card 2 -->
+                <div class="tour-cards">
+                    <div class="image-box">
+                        <img src="https://static.hoteltreats.com/site/styles/hero/s3/2022-03/Spa%20HPA.jpg?h=4b1b1ab4&itok=p7iCO3v4"
+                            alt="hotel2">
+                        <div class="overlay"></div>
+                        <div class="image-box-text">
+                            <h2>Hotel Hospes Palacio de Arenales</h2>
+                            <p>Sofisticado, con spa y restaurante</p>
+                        </div>
+
+                    </div>
+                    <div class="tour-cards-text">
+                        <h1>Hotel Hospes Palacio de Arenales & Spa Cáceres</h1>
+                        <p>El Hotel Hospes Palacio de Arenales & Spa es un exclusivo alojamiento de 5 estrellas ubicado a tan solo 5 km del centro histórico de Cáceres, en un entorno natural rodeado de olivos centenarios. Este palacio del siglo XVII, antigua residencia de verano de la noble familia Golfín, ha sido cuidadosamente restaurado para ofrecer una experiencia de lujo y bienestar en plena naturaleza.</p>
+                        <a href="#" class="btn-map">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Ver ruta en el Mapa</span>
+                        </a>
+                        <div class="price">
+                            <p>$220 <span>Por persona</span></p>
+                            <h2>Un finde de escapada</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------  -->
+
+                <!-- cards 3  -->
+                <div class="tour-cards">
+                    <div class="image-box">
+                        <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/Oficina%20de%20Turismo.jpg?itok=U7JyaX7-&sc=62b93d09080e7c26228fe3294f696fd3"
+                            alt="oficina-turismo ">
+                        <div class="overlay"></div>
+                        <div class="image-box-text">
+                            <h2>Oficina de turismo</h2>
+                            <p>Visita lo mejor de Cáceres</p>
+                        </div>
+
+                    </div>
+                    <div class="tour-cards-text">
+                        <h1>Oficina de turismo de Cáceres</h1>
+                        <p>La Oficina Municipal de Turismo de Cáceres es el punto de partida ideal para descubrir esta ciudad Patrimonio de la Humanidad. Ubicada en la Plaza Mayor, 1, junto al emblemático Arco de la Estrella, ofrece información detallada sobre monumentos, rutas, eventos culturales, gastronomía y naturaleza en Cáceres y su provincia.</p>
+                        <a href="#" class="btn-map">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Ver ruta en el mapa</span>
+                        </a>
+                        <div class="price">
+                            <p>15€ <span>Por persona</span></p>
+                            <h2>Recorrido por el casco histórico</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------ -->
+            </div>
+            <a href="reservas.html">
+                <button class="btn btn-view-all">
+                    Hacer una reserva
+                </button>
+            </a>
+
+         <!-- ------ -->
+           <!-- Juego de Tronos -->
+
+        <section class="sale" id="sale">
+            <div class="overlay1">
+
+            </div>
+            <div class="main-container">
+                <div class="heading">
+                    <h1>¿Te gusta Juego de Tronos?</h1>
+                    
+                    
+                </div>
+                <div class="info">
+                    <p>
+                        Cáceres se ha convertido en un destino imprescindible para los aficionados de Juego de Tronos, ya que su impresionante casco histórico fue transformado en Desembarco del Rey durante la séptima temporada de la serie. Además, la ciudad también ha servido como escenario para la precuela La Casa del Dragón.
+                    </p>
+                    <br>
+                    <p>
+                        Una visita guiada de aproximadamente 1 hora y 30 minutos que recorre los lugares más emblemáticos del rodaje. El tour es gratuito, aunque se aceptan propinas. Puedes reservar tu plaza a través de Civitatis.
+                    </p>
+                </div>
+                <div class="price">
+                    <p>Free Tour<span>por la ciudad</span></p>
+                    <h2> 1 hora y 30 minutos de recorrido </h2>
+                </div>
+            </div>
+            <div class="overlay2">
+
+            </div>
+        </section>
+
+            <!-- ----- -->
+             <!-- Asistente -->
+
+
+<section class="asistente" id="asistente">
+    <div class="main-text">
+        <h2>¿Aún no has visto esto?</h2>
+        <h1>Asistente<span> V</span>irtual</h1>
+        <p>Descubre Cáceres con nuestro Asistente Virtual</p>
+        
+        <p>Tu guía inteligente en la ciudad. Con solo unos clics, localiza fácilmente farmacias de guardia, estancos, puntos limpios, hoteles, restaurantes, oficinas de turismo y mucho más. Disponible las 24 horas, nuestro asistente virtual está diseñado para hacer tu estancia más cómoda, segura y organizada.
+            Ya seas visitante o residente, tendrás toda la información útil de Cáceres en la palma de tu mano, siempre actualizada y al instante.
+            
+            </p>
+    </div>
+    <div class="main-container">
+        <video
+            src=""
+            autoplay loop muted></video>
+    </div>
+
+</section>
+<a href="asistente/asistente.html">
+    <button class="btn btn-view-all">
+        Ir al asistente
+    </button>
+</a>
+</section>
+
+
+        <!-- ----- -->
+        <!-- Imagenes -->
+
+        <section class="media" id="media">
+            <div class="main-text">
+                <h2>Media</h2>
+                <h1>Cáceres en fotos</h1>
+            </div>
+            <div class="main-container">
+                <div class="image image-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/C%C3%A1ceres_-_Arco_de_la_Estrella_-_DSC_1923_W.JPG" alt="Arco de la Estrella">
+                    <h3>Arco de la Estrella</h3>
+                </div>
+                <div class="image image-2">
+                    <img src="https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/extremadura/casa_golfines_abajo_caceres_c_villorejo_s_1248015055.jpg" alt="Palacio de los Golfines ">
+                    <h3>Palacio de los Golfines</h3>
+                </div>
+                <div class="image image-3">
+                    <img src="https://www.extremadura.com/uploads/guide/guide/logo/5577ed866c6f63164a750f00/large_plaza-de-san-jorge.jpeg" alt="Plaza de San Jorge">
+                    <h3>Plaza de San Jorge</h3>
+                </div>
+                <div class="image image-4">
+                    <img src="https://lh4.googleusercontent.com/proxy/GSKx_iNSfKs-xkP4_nG7RGVaPklUCpAfYgBq6doyaTaxBYNsurKM2LhqLMXv6Y32q425fK2euWwX4FoQ5UCm1WjwPU5DZYJc0ej64megRKdYGMzsV9VcsvC1JYNT" alt="Museo de Cáceres">
+                    <h3>Museo de Cáceres</h3>
+                </div>
+                <div class="image image-5">
+                    <img src="https://avuelapluma.es/wp-content/uploads/2019/12/barriojudio.jpg" alt="Barrio Judio">
+                    <h3>Barrio Judio</h3>
+                </div>
+                <div class="image image-6">
+                    <img src="https://turismo.caceres.es/sites/default/files/multimedia/_S4A0436.jpg" alt=" Centro de Artes Visuales ">
+                    <h3>Centro de Artes Visuales</h3>
+                </div>
+                <div class="image image-7">
+                    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Parque%20del%20Pr%C3%ADncipe%2011.jpg?itok=g1JXBi1S&sc=613662f4075ba3f3d825c4cc96951735" alt="Parque del Príncipe">
+                    <h3>Parque del Príncipe</h3>
+                </div>
+                <div class="image image-8">
+                    <img src="https://www.extremaduramisteriosa.com/sites/default/files/virgendelamontana1.jpg" alt="Virgen de la Montana">
+                    <h3>Virgen de la Montana</h3>
+                </div>
+                <div class="image image-9">
+                    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Concatedral%20de%20C%C3%A1ceres%20y%20museo%20catedralicio%20163.jpg?itok=DlUKM_VX&sc=87aa53221020a7ba6c089c8d35c317c4" alt="Estatua de San Pedro de Alcántara">
+                    <h3>Estatua de San Pedro de Alcántara</h3>
+                </div>
+                <div class="image image-10">
+                    <img src="https://caceres.vectalia.es/wp-content/uploads/sites/6/2018/08/AdobeStock_61356439.jpeg" alt="Palacio Episcopal">
+                    <h3>Palacio Episcopal</h3>
+                </div>
+                <div class="image image-11">
+                    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Foro%20de%20los%20Balbos.jpg?itok=zdLbj0uh&sc=e25e2aab352b1f64127a33f52c545372" alt="Foro de los Balbos">
+                    <h3>Foro de los Balbos</h3>
+                </div>
+                <div class="image image-12">
+                    <img src="https://mycities.es/public/data/images/originals/6474cfad57161-dp-110375772-848.jpg" alt="Iglesia de San Mateo">
+                    <h3>Iglesia de San Mateo</h3>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- ----- -->
+
+        <!-- contact  -->
+        <section class="contact" id="contact">
+            <div class="main-text">
+                <h2>Ayuda</h2>
+                <h1>Contacta con nosotros</h1>
+                <p>Tienes alguna duda? No dudes en contactarnos</p>
+                <br>
+                <p>¿No tienes cuenta? <a href="registro.html"><u>Regístrate aquí</u></a></p>
+            </div>
+            <div class="main-container">
+                <form action="#">
+                    <div class="name">
+                        <label for="name">Nombre</label>
+                        <input type="text" placeholder="Introduce tu nombre " id="name" name="name">
+                    </div>
+                    <div class="phone">
+                        <label for="phone">Email</label>
+                        <input type="text" name="phone" id="phone" placeholder="Introduce tu email">
+                    </div>
+                    <div class="message">
+                        <label for="message">Tu mensaje</label>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="Haznos saber tu mensaje"></textarea>
+                    </div>
+                    <button class="btn-send">
+                        Send
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ----- -->
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-image">
+            <div class="overlay1"></div>
+            <div class="overlay2"></div>
+
+        </div>
+        <div class="main-container">
+            <div class="heading-foo">
+                <img src="public/images/logo/logo-caceres.png" alt="">
+                <h1>Geo Caceres</h1>
+                <p>Visita lo mejor de Cáceres, no te arrepentirás</p>
+            </div>
+            <div class="social-media">
+                <h1>Nuestras redes sociales</h1>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <h1>Enlaces a la web</h1>
+                <ul>
+                    <li><a href="#explore">Inicio</a></li>
+                    <li><a href="#tour">¿Que visitar?</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#asistente">Asistente Virtual</a></li>
+                    <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h1>Contacto</h1>
+                <div class="contact-info-text">
+                    <p>+34 677 99 82 33/p>
+                    <p>geocaceres@ayuda.com</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+    </footer>
+    <!-- ----- -->
+
+    <script src="public/js/main.js"></script>
+
+
+<!-- Modal Login -->
+<div id="loginModal" class="modal" style="display: none;">
+    <div class="modal-content" id="modalContent">
+        <div class="modal-header" id="modalHeader">
+            <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+            <h2>Iniciar Sesión</h2>
+        </div>
+        <form onsubmit="return loginUser()">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn-send">Send</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </div>
+</div>
+
+
+
+<script>
+    async function loginUser() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+    
+      try {
+        const res = await fetch('/api/usuarios/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: user, password: pass })
+        });
+    
+        const data = await res.json();
+    
+        if (res.ok) {
+          // Guardar el usuario en localStorage
+          localStorage.setItem("usuario", JSON.stringify({
+            id: data.user_id,
+            username: data.username,
+            name: data.name
+          }));
+    
+          alert("✅ Sesión iniciada correctamente");
+          document.getElementById('loginModal').style.display = 'none';
+        } else {
+          alert("❌ " + data.message);
+        }
+      } catch (error) {
+        console.error('Error en login:', error);
+        alert("Error al iniciar sesión");
+      }
+    
+      return false;
+    }
+    </script>
+    
+
+
+
+</body>
+
+</html>

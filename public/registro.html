@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoCaceres - Registro</title>
+  <link rel="stylesheet" href="sass/style.css" />
+</head>
+
+<body>
+  <section class="contact" id="contact">
+    <div class="main-text">
+      <h2>Contacto</h2>
+      <h1>Regístrate aquí</h1>
+    </div>
+    <div class="main-container">
+      <form id="registroForm">
+        <div class="name">
+          <label for="name">Nombre</label>
+          <input type="text" placeholder="Introduce tu nombre" id="name" name="name" required />
+        </div>
+        <div class="username">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" placeholder="Tu usuario" id="username" name="username" required />
+        </div>
+        <div class="email">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Introduce tu email" required />
+        </div>
+        <div class="phone">
+          <label for="phone">Teléfono</label>
+          <input type="text" name="phone" id="phone" placeholder="Introduce tu teléfono" />
+        </div>
+        <div class="password">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Contraseña" required />
+        </div>
+        <div id="mensaje" class="mensaje-estado"></div>
+<button type="submit" class="btn-send">Registrar</button>
+
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('registroForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+  
+      const mensajeDiv = document.getElementById('mensaje');
+      mensajeDiv.textContent = '';
+      mensajeDiv.className = 'mensaje-estado';
+  
+      const data = {
+        name: document.getElementById('name').value,
+        username: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        password: document.getElementById('password').value,
+      };
+  
+      try {
+        const response = await fetch('/api/usuarios/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+  
+        const result = await response.json();
+  
+        if (response.ok) {
+          mensajeDiv.textContent = result.message;
+          mensajeDiv.classList.add('success');
+          // Opcional: redirigir o limpiar formulario
+          // document.getElementById('registroForm').reset();
+        } else {
+          mensajeDiv.textContent = result.message;
+          mensajeDiv.classList.add('error');
+        }
+  
+      } catch (error) {
+        console.error('❌ Error de conexión:', error);
+        mensajeDiv.textContent = '❌ No se pudo conectar con el servidor. Inténtalo más tarde.';
+        mensajeDiv.classList.add('error');
+      }
+    });
+  </script>
+  
+</body>
+</html>

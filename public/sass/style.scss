@@ -819,7 +819,7 @@ li{
             }
         }
 
-        .phone,.name,.message{
+        .phone, .username, .name, .message, .email, .password {
             width: 100%;
             display: flex;
             flex-direction: column;   
