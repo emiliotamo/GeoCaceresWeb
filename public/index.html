@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- css  -->
-    <link rel="stylesheet" href="/sass/style.css">
+    <link rel="stylesheet" href="./sass/style.css">
     <script src="/js/main.js"></script>
 
 </head>
@@ -35,7 +35,14 @@
                 <li><a href="#tour">¿Qué visitar?</a></li>
                 <li><a href="#asistente">Asistente Virtual</a></li>
                 <li><a href="#media">Media</a></li>
-                <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a></li>
+                <li id="authContainer">
+                    <span id="authContent">
+                      <a href="#" onclick="showLoginModal(); return false;">Iniciar sesión</a> /
+                      <a href="registro.html">Registrarte</a>
+                    </span>
+                  </li>
+                  
+                  
             </ul>
             <div class="btn-group">
                 <a href="asistente/asistente.html" class="btn btn-try">
@@ -519,7 +526,31 @@
       return false;
     }
     </script>
-    
+
+<script>
+
+//login
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("usuario"));
+  const authContent = document.getElementById("authContent");
+
+  if (user && user.username) {
+    authContent.innerHTML = `
+      <strong>${user.username}</strong> /
+      <a href="#" onclick="logoutUser()">Cerrar sesión</a>
+    `;
+  }
+});
+  function logoutUser() {
+    localStorage.removeItem("usuario");
+    location.reload(); // Refresca para volver al modo "no logueado"
+  }
+  
+  function showLoginModal() {
+    document.getElementById("loginModal").style.display = "block";
+  }
+  
+</script> 
 
 
 
