@@ -14,75 +14,59 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: hsl(198, 100%, 6%);
+  background-color: hsl(198deg, 100%, 6%);
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid hsl(198, 100%, 6%);
+  border: 2px solid hsl(198deg, 100%, 6%);
   border-radius: 50px;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: hsl(198, 100%, 6%);
+  background-color: hsl(198deg, 100%, 6%);
 }
 
 a, a:visited, a:active {
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 li {
   list-style: none;
 }
 
-#preloadder {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: hsl(0, 0%, 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../images/preloadder/loader.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 35%;
-  z-index: 99999;
-}
+
 
 .btn {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 0.5rem;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
   padding: 1rem 2rem;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
 }
 .btn span {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 700;
   letter-spacing: 1.2px;
   flex-wrap: nowrap;
   transition: all 700ms ease-in-out;
 }
 .btn svg {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   transition: all 700ms ease-in-out;
   width: 20px;
 }
 .btn:hover, .btn:visited {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
 }
 .btn:hover span, .btn:visited span {
   transform: translateX(15px);
@@ -98,9 +82,9 @@ li {
   border: none;
   margin: 8rem auto;
   font-weight: 700;
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
   background-color: transparent;
-  border: 3px solid hsl(167, 82%, 65%);
+  border: 3px solid hsl(167deg, 82%, 65%);
   transition: all 500ms ease-in-out;
 }
 .btn-view-all::after {
@@ -111,7 +95,7 @@ li {
   left: -20px;
   width: 30px;
   height: 15px;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
 }
 .btn-view-all::before {
   content: "";
@@ -121,11 +105,11 @@ li {
   right: -20px;
   width: 30px;
   height: 15px;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
 }
 .btn-view-all:hover {
-  background-color: hsl(167, 82%, 65%);
-  color: hsl(198, 100%, 6%);
+  background-color: hsl(167deg, 82%, 65%);
+  color: hsl(198deg, 100%, 6%);
 }
 
 .main-container {
@@ -138,7 +122,7 @@ li {
   max-width: 1000px;
   margin: 4rem auto;
   text-align: center;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
 }
 .main-text h1 {
   font-size: 4rem;
@@ -146,7 +130,7 @@ li {
   margin-bottom: 2rem;
 }
 .main-text h1 span {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 .main-text h2 {
   display: inline-block;
@@ -161,7 +145,7 @@ li {
   right: -5px;
   width: 0.4rem;
   height: 0.4rem;
-  background-color: hsl(167, 61%, 45%);
+  background-color: hsl(167deg, 61%, 45%);
 }
 .main-text p {
   display: inline-block;
@@ -181,7 +165,7 @@ li {
   height: 10px;
   border-radius: 50px;
   opacity: 20%;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
 }
 .main-text p::after {
   content: "";
@@ -193,7 +177,7 @@ li {
   height: 10px;
   border-radius: 50px;
   opacity: 20%;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
 }
 
 .grid {
@@ -234,7 +218,8 @@ li {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .image-box img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -242,7 +227,7 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0deg, 0%, 10%);
   width: 100%;
   height: 100%;
   opacity: 60%;
@@ -254,17 +239,18 @@ li {
 }
 .image-box-text h2 {
   font-size: 3rem;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   opacity: 80%;
 }
 .image-box-text p {
   font-size: 1.5rem;
   font-weight: 500;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   opacity: 80%;
 }
 
 .primary-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -272,8 +258,8 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(0, 0%, 3%);
-  color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 3%);
+  color: hsl(0deg, 0%, 100%);
   padding: 1rem 2rem;
   z-index: 9999;
 }
@@ -295,7 +281,7 @@ li {
   font-size: 2rem;
 }
 .primary-header .left-part .logo h1 span {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
   letter-spacing: 2px;
 }
 .primary-header .right-part .navbar {
@@ -308,7 +294,7 @@ li {
   width: 70%;
   gap: 1.5rem;
   letter-spacing: 1px;
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0deg, 0%, 10%);
   transition: all 1000ms ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   padding: 1rem;
@@ -320,13 +306,13 @@ li {
   flex-direction: column;
 }
 .primary-header .right-part .navbar ul li a {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-size: 2rem;
   font-weight: 500;
   transition: all 500ms ease-in-out;
 }
 .primary-header .right-part .navbar ul li a:hover {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 .primary-header .right-part .navbar.active {
   opacity: 1;
@@ -340,29 +326,29 @@ li {
   gap: 0.5rem;
   cursor: pointer;
 }
-.primary-header .right-part .ham-menu .linea {
+.primary-header .right-part .ham-menu .line {
   width: 35px;
   height: 0.6rem;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   border-radius: 5px;
   transition: all 500ms ease-in-out;
 }
-.primary-header .right-part .ham-menu.active .linea {
+.primary-header .right-part .ham-menu.active .line {
   transform-origin: 10px 3px;
 }
-.primary-header .right-part .ham-menu.active .linea-1 {
+.primary-header .right-part .ham-menu.active .line-1 {
   transform: rotate(405deg);
 }
-.primary-header .right-part .ham-menu.active .linea-2 {
+.primary-header .right-part .ham-menu.active .line-2 {
   display: none;
 }
-.primary-header .right-part .ham-menu.active .linea-3 {
+.primary-header .right-part .ham-menu.active .line-3 {
   transform: rotate(-405deg);
 }
 
 .banner {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1547626740-02cb6aed9ef8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1673467340628-2X7S5T9QYH41UK8NC1C2/que-ver-en-caceres.jpg?format=1500w");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -380,7 +366,7 @@ li {
 }
 .banner-text h1 {
   font-size: 8vh;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   margin-bottom: 2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -388,10 +374,10 @@ li {
   font-family: "Poppins", sans-serif;
 }
 .banner-text h1 span {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 .banner-text p {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-size: 1.8rem;
   letter-spacing: 1px;
   margin-bottom: 3rem;
@@ -403,7 +389,7 @@ li {
   transition: all 500ms ease-in-out;
 }
 .banner-text .btn-get:hover {
-  background-color: hsl(167, 61%, 45%);
+  background-color: hsl(167deg, 61%, 45%);
 }
 
 .explore {
@@ -432,7 +418,8 @@ li {
 .about .main-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .tour {
@@ -464,7 +451,7 @@ li {
   font-size: 1rem;
 }
 .tour .main-container .tour-cards-text {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   line-height: 1.7;
 }
 .tour .main-container .tour-cards-text h1 {
@@ -474,7 +461,7 @@ li {
   transition: all 350ms ease-in-out;
 }
 .tour .main-container .tour-cards-text h1:hover {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 .tour .main-container .tour-cards-text p {
   cursor: pointer;
@@ -486,8 +473,9 @@ li {
   display: flex;
   align-items: center;
   flex-direction: row;
-  column-gap: 0.5rem;
-  color: hsl(167, 82%, 65%);
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  color: hsl(167deg, 82%, 65%);
   text-decoration: underline;
 }
 .tour .main-container .tour-cards-text .btn-map svg {
@@ -496,7 +484,7 @@ li {
 .tour .main-container .tour-cards-text .btn-map span {
   font-size: 1.4rem;
 }
-.tour .main-container .tour-cards-text .precio {
+.tour .main-container .tour-cards-text .price {
   width: 100%;
   max-width: 500px;
   cursor: pointer;
@@ -504,40 +492,40 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: hsl(0, 0%, 3%);
+  color: hsl(0deg, 0%, 3%);
   border-radius: 50px;
   text-align: center;
 }
-.tour .main-container .tour-cards-text .precio p {
+.tour .main-container .tour-cards-text .price p {
   padding: 0.6rem;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   text-align: center;
   font-size: 1.3rem;
   flex-basis: 35%;
   margin: 0;
-  color: hsl(0, 0%, 3%);
+  color: hsl(0deg, 0%, 3%);
   opacity: 100%;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   border-radius: 10rem 0rem 0rem 10rem;
 }
-.tour .main-container .tour-cards-text .precio h2 {
+.tour .main-container .tour-cards-text .price h2 {
   padding: 1.5rem 0rem;
   border-radius: 0rem 10rem 10rem 0rem;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0deg, 0%, 90%);
   flex-basis: 75%;
   opacity: 80%;
 }
 
 .sale {
-  background: linear-gradient(to top left, rgba(17, 97, 106, 0.3), rgba(255, 255, 255, 0)), url("https://images.unsplash.com/photo-1488415032361-b7e238421f1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+  background: linear-gradient(to top left, rgba(17, 97, 106, 0.3), rgba(255, 255, 255, 0)), url("https://i0.wp.com/xn--lacompaialibredebraavos-yhc.com/wp-content/uploads/2018/05/Arco-de-la-Estrella-Caceres.jpg?fit=1018%2C522&ssl=1");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 100vh;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   padding: 5rem 2rem;
   position: relative;
   display: flex;
@@ -557,14 +545,14 @@ li {
   font-size: 4rem;
 }
 .sale .heading h1:hover {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 .sale .heading h2 {
   font-size: 1.6rem;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
-  background-color: hsl(198, 100%, 6%);
-  color: hsl(167, 82%, 65%);
+  background-color: hsl(198deg, 100%, 6%);
+  color: hsl(167deg, 82%, 65%);
   border-radius: 50px;
 }
 .sale .info {
@@ -574,7 +562,7 @@ li {
 .sale .info p {
   font-size: 1.4rem;
 }
-.sale .precio {
+.sale .price {
   width: 100%;
   max-width: 500px;
   cursor: pointer;
@@ -582,28 +570,28 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: hsl(0, 0%, 3%);
+  color: hsl(0deg, 0%, 3%);
   border-radius: 50px;
   text-align: center;
 }
-.sale .precio p {
+.sale .price p {
   padding: 0.6rem;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   text-align: center;
   font-size: 1.3rem;
   flex-basis: 35%;
   margin: 0;
-  color: hsl(0, 0%, 3%);
+  color: hsl(0deg, 0%, 3%);
   opacity: 100%;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   border-radius: 10rem 0rem 0rem 10rem;
 }
-.sale .precio h2 {
+.sale .price h2 {
   padding: 1.5rem 0rem;
   border-radius: 0rem 10rem 10rem 0rem;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0deg, 0%, 90%);
   flex-basis: 75%;
   opacity: 80%;
 }
@@ -631,7 +619,8 @@ li {
   transition: all 450ms ease-in-out;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .media .main-container .image h3 {
   transition: all 450ms ease-in-out;
@@ -639,7 +628,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -662,7 +651,7 @@ li {
 .contact .main-container form {
   width: 100%;
   max-width: 600px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -675,47 +664,55 @@ li {
   padding: 1rem 4rem;
   border: none;
   cursor: pointer;
-  background-color: hsl(167, 82%, 65%);
-  color: hsl(198, 100%, 6%);
+  background-color: hsl(167deg, 82%, 65%);
+  color: hsl(198deg, 100%, 6%);
   font-weight: 700;
   font-size: 1.6rem;
   transition: all 350ms ease-in-out;
 }
 .contact .main-container .btn-send:hover {
-  background-color: hsl(167, 61%, 45%);
+  background-color: hsl(167deg, 61%, 45%);
 }
-.contact .main-container .phone, .contact .main-container .username, .contact .main-container .name, .contact .main-container .message, .contact .main-container .email, .contact .main-container .password {
+.contact .main-container .phone, .contact .main-container .name, .contact .main-container .message {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.contact .main-container .phone label, .contact .main-container .username label, .contact .main-container .name label, .contact .main-container .message label, .contact .main-container .email label, .contact .main-container .password label {
+.contact .main-container .phone label, .contact .main-container .name label, .contact .main-container .message label {
   font-size: 1.5rem;
   margin: 1rem 0;
   letter-spacing: 1.2px;
 }
-.contact .main-container .phone input, .contact .main-container .phone textarea, .contact .main-container .username input, .contact .main-container .username textarea, .contact .main-container .name input, .contact .main-container .name textarea, .contact .main-container .message input, .contact .main-container .message textarea, .contact .main-container .email input, .contact .main-container .email textarea, .contact .main-container .password input, .contact .main-container .password textarea {
+.contact .main-container .phone input, .contact .main-container .phone textarea, .contact .main-container .name input, .contact .main-container .name textarea, .contact .main-container .message input, .contact .main-container .message textarea {
   padding: 1rem 1.4rem;
   font-size: 1.3rem;
-  border: 2px solid hsl(167, 82%, 65%);
+  border: 2px solid hsl(167deg, 82%, 65%);
   background-color: transparent;
   outline: none;
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
   resize: none;
 }
-.contact .main-container .phone input::placeholder, .contact .main-container .phone textarea::placeholder, .contact .main-container .username input::placeholder, .contact .main-container .username textarea::placeholder, .contact .main-container .name input::placeholder, .contact .main-container .name textarea::placeholder, .contact .main-container .message input::placeholder, .contact .main-container .message textarea::placeholder, .contact .main-container .email input::placeholder, .contact .main-container .email textarea::placeholder, .contact .main-container .password input::placeholder, .contact .main-container .password textarea::placeholder {
-  color: hsl(0, 0%, 100%);
+.contact .main-container .phone input::-moz-placeholder, .contact .main-container .phone textarea::-moz-placeholder, .contact .main-container .name input::-moz-placeholder, .contact .main-container .name textarea::-moz-placeholder, .contact .main-container .message input::-moz-placeholder, .contact .main-container .message textarea::-moz-placeholder {
+  color: hsl(0deg, 0%, 100%);
+  opacity: 70%;
+}
+.contact .main-container .phone input:-ms-input-placeholder, .contact .main-container .phone textarea:-ms-input-placeholder, .contact .main-container .name input:-ms-input-placeholder, .contact .main-container .name textarea:-ms-input-placeholder, .contact .main-container .message input:-ms-input-placeholder, .contact .main-container .message textarea:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 100%);
+  opacity: 70%;
+}
+.contact .main-container .phone input::placeholder, .contact .main-container .phone textarea::placeholder, .contact .main-container .name input::placeholder, .contact .main-container .name textarea::placeholder, .contact .main-container .message input::placeholder, .contact .main-container .message textarea::placeholder {
+  color: hsl(0deg, 0%, 100%);
   opacity: 70%;
 }
 
 footer {
   margin: 5rem auto 0rem auto;
-  background-color: hsl(0, 0%, 3%);
+  background-color: hsl(0deg, 0%, 3%);
 }
 footer .footer-image {
   width: 100%;
   height: 80vh;
-  background: url("https://images.unsplash.com/photo-1510437097452-74ac66e27feb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80");
+  background: url("https://turismo.caceres.es/sites/default/files/multimedia/caceresCH_1024x366.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -725,8 +722,8 @@ footer .footer-image .overlay2 {
   background: linear-gradient(transparent, rgb(8, 8, 8), rgb(8, 8, 8));
 }
 footer .main-container {
-  background-color: hsl(0, 0%, 3%);
-  color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 3%);
+  color: hsl(0deg, 0%, 100%);
   margin: 0rem auto;
   padding: 1rem 2rem;
   display: grid;
@@ -755,7 +752,7 @@ footer .main-container h1::after {
   left: 1.4rem;
   width: 28px;
   height: 0.4rem;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
   border-radius: 8px;
   opacity: 80%;
 }
@@ -766,7 +763,7 @@ footer .main-container h1::before {
   left: 0;
   width: 0.8rem;
   height: 0.4rem;
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
   border-radius: 8px;
   opacity: 80%;
 }
@@ -792,7 +789,7 @@ footer .main-container .social-media ul li {
   width: 40px;
   aspect-ratio: 1/1;
   background-color: transparent;
-  border: 3px solid hsl(167, 82%, 65%);
+  border: 3px solid hsl(167deg, 82%, 65%);
   border-radius: 100px;
   display: flex;
   justify-content: center;
@@ -800,20 +797,20 @@ footer .main-container .social-media ul li {
   transition: all 350ms ease-in-out;
 }
 footer .main-container .social-media ul li .fill {
-  fill: hsl(167, 82%, 65%);
+  fill: hsl(167deg, 82%, 65%);
 }
 footer .main-container .social-media ul li svg {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
   width: 1.5rem;
 }
 footer .main-container .social-media ul li:hover {
-  background-color: hsl(167, 82%, 65%);
+  background-color: hsl(167deg, 82%, 65%);
 }
 footer .main-container .social-media ul li:hover .fill {
-  fill: hsl(198, 100%, 6%);
+  fill: hsl(198deg, 100%, 6%);
 }
 footer .main-container .social-media ul li:hover svg {
-  color: hsl(198, 100%, 6%);
+  color: hsl(198deg, 100%, 6%);
 }
 footer .main-container .main {
   display: flex;
@@ -831,7 +828,7 @@ footer .main-container .main ul li a {
   transition: all 350ms ease-in-out;
 }
 footer .main-container .main ul li a:hover {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 footer .main-container .contact-info {
   display: flex;
@@ -841,18 +838,16 @@ footer .main-container .contact-info {
 footer .credit {
   margin: 5rem auto 0rem;
   padding: 0 0 4rem 0;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   text-align: center;
   letter-spacing: 1.2px;
 }
 footer .credit a {
-  color: hsl(167, 82%, 65%);
+  color: hsl(167deg, 82%, 65%);
 }
 
 @media (min-width: 868px) {
-  #preloadder {
-    background-size: 15%;
-  }
+ 
   .primary-header {
     padding: 1rem 6rem;
     gap: 2rem;
@@ -907,6 +902,66 @@ footer .credit a {
   footer .main-container .main {
     padding: 0 0 0 5rem;
   }
+}/*# sourceMappingURL=style.css.map */
+
+
+.modal {
+  position: fixed; z-index: 9999; left: 0; top: 0;
+  width: 100%; height: 100%; overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  position: absolute; background-color: #fff;
+  margin: auto; padding: 20px 30px;
+  border: 1px solid #ccc; width: 400px;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+.modal-header {
+  display: flex; justify-content: space-between;
+  align-items: center; cursor: move; margin-bottom: 15px;
+}
+.modal-content h2 {
+  margin: 0; font-size: 24px; color: #333;
+}
+input[type="text"], input[type="password"] {
+  width: 100%; padding: 12px; margin: 10px 0;
+  box-sizing: border-box; border-radius: 8px;
+  border: 1px solid #aaa;
+}
+.close {
+  float: right; font-size: 22px; cursor: pointer; color: #333;
+}
+.btn-send {
+  margin-top: 2rem; padding: 1rem 4rem; border: none;
+  cursor: pointer; background-color: hsl(167deg, 82%, 65%);
+  color: hsl(198deg, 100%, 6%); font-weight: 700;
+  font-size: 1.6rem; transition: all 350ms ease-in-out;
+}
+.modal-content p {
+  text-align: center; margin-top: 15px;
+  color: #333; font-size: 14px;
+}
+.modal-content a {
+  color: hsl(167deg, 82%, 65%);
+  text-decoration: none; font-weight: bold;
+}
+.modal-content a:hover {
+  text-decoration: underline;
 }
 
-/*# sourceMappingURL=style.css.map */
+
+.mensaje-estado {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.mensaje-estado.error {
+  color: red;
+}
+
+.mensaje-estado.success {
+  color: green;
+}
+
+
