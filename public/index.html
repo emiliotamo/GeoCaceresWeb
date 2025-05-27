@@ -36,11 +36,12 @@
                 <li><a href="#asistente">Asistente Virtual</a></li>
                 <li><a href="#media">Media</a></li>
                 <li id="authContainer">
-                    <span id="authContent">
-                      <a href="#" onclick="showLoginModal(); return false;">Iniciar sesión</a> /
-                      <a href="registro.html">Registrarte</a>
-                    </span>
-                  </li>
+  <span id="authContent">
+  <a href="#" class="footer-link" onclick="showLoginModal(); return false;">Iniciar sesión</a> /
+  <a href="registro.html" class="footer-link">Registrarte</a>
+</span>
+</li>
+
                   
                   
             </ul>
@@ -80,62 +81,115 @@
             </div>
         </section>
 
-        <!-- exploree  -->
-        <section class="explore" id="explore">
-            <div class="main-text">
-                <h2>Visita</h2>
-                <h1><span>C</span>áceres</h1>
-                <p><p>Cáceres maravilla a sus visitantes con su impresionante casco histórico, sus monumentos medievales y un entorno perfecto para visitar.</p></p>
-            </div>
-            <div class="main-container">
-                <div class="image-box image-1">
-                    <img src="https://espanaxdescubrir.com/wp-content/uploads/2020/05/Ciudad-C%C3%A1ceres-Web-1.jpg"
-                        alt="">
-                    <div class="overlay"></div>
-                    <div class="image-box-text">
-                        <h2> Plaza Mayor</h2>
-                        <p>Antigua plaza del mercado</p>
-                    </div>
-                </div>
-                <div class="image-box image-1">
-                    <img src="https://www.barcelo.com/guia-turismo/wp-content/uploads/ok-torre-de-bujaco.jpg"
-                        alt="">
-                    <div class="overlay"></div>
-                    <div class="image-box-text">
-                        <h2>Torre de Bujaco</h2>
-                        <p>Vistas únicas de la Plaza Mayor</p>
-                    </div>
-                </div>
-                <div class="image-box image-1">
-                    <img src="https://concatedralcaceres.com/wp-content/uploads/20220801_ConcatedralCaceres_-38-2.jpg"
-                        alt="">
-                    <div class="overlay"></div>
-                    <div class="image-box-text">
-                        <h2>Concatedral de Santa María</h2>
-                        <p>Joya del gótico y renacimiento cacereño</p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-view-all">
-                Ver más
-            </button>
-        </section>
+  <!-- exploree  -->
+<section class="explore" id="explore">
+  <div class="main-text">
+    <h2>Visita</h2>
+    <h1><span>C</span>áceres</h1>
+    <p>Cáceres maravilla a sus visitantes con su impresionante casco histórico, sus monumentos medievales y un entorno perfecto para visitar.</p>
+  </div>
 
-        <!--   -->
-        <section class="" id="">
-            <div class="main-text">
-                <h2>Sobre nosotros</h2>
-                <h1>Sensaciones<span> I</span>nolvidables</h1>
-                <p>La experiencia Cáceres es una forma única de descubrir los rincones más emblemáticos de esta ciudad histórica. Te ayudamos a planificar tu viaje ideal: encontrar los mejores alojamientos, acceder a información turística actualizada y disfrutar de cada momento sin preocupaciones. Nada te impedirá sumergirte en la magia de Cáceres, donde la historia y la cultura cobran vida.</p>
-            </div>
-            <div class="main-container">
-                <video
-                    src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-lush-river-valley-and-snowy-mountains-15919-large.mp4"
-                    autoplay loop muted></video>
-            </div>
+  <div class="main-container">
+    <!-- Primeros 3 lugares -->
+    <div class="image-box image-1">
+      <img src="https://espanaxdescubrir.com/wp-content/uploads/2020/05/Ciudad-C%C3%A1ceres-Web-1.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="image-box-text">
+        <h2>Plaza Mayor</h2>
+        <p>Antigua plaza del mercado</p>
+      </div>
+    </div>
 
-        </section>
+    <div class="image-box image-1">
+      <img src="https://www.barcelo.com/guia-turismo/wp-content/uploads/ok-torre-de-bujaco.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="image-box-text">
+        <h2>Torre de Bujaco</h2>
+        <p>Vistas únicas de la Plaza Mayor</p>
+      </div>
+    </div>
 
+    <div class="image-box image-1">
+      <img src="https://concatedralcaceres.com/wp-content/uploads/20220801_ConcatedralCaceres_-38-2.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="image-box-text">
+        <h2>Concatedral de Santa María</h2>
+        <p>Joya del gótico y renacimiento cacereño</p>
+      </div>
+    </div>
+
+    <!-- Nuevos lugares ocultos inicialmente -->
+    <div class="image-box image-1 extra-place" style="display: none;">
+      <img src="https://www.juntaex.es/documents/77055/2861495/20240703%20Vista%20casco%20antiguo%20CACERES_15.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="image-box-text">
+        <h2>Barrio Monumental</h2>
+        <p>Corazón medieval de Cáceres, Patrimonio de la Humanidad</p>
+      </div>
+    </div>
+
+    <div class="image-box image-1 extra-place" style="display: none;">
+      <img src="https://www.turismosingular.es/wp-content/uploads/2021/07/780-Guadalupe-Monasterio-1.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="image-box-text">
+        <h2>Monasterio de Guadalupe</h2>
+        <p>Imponente santuario patrimonio de la humanidad</p>
+      </div>
+    </div>
+
+    <div class="image-box image-1 extra-place" style="display: none;">
+      <img src="https://mrplan.io/experiencias/modulos/TImageS3/get_file.php?tipo_elemento=2&tipo=1&fichero=experiencias/10874/experienciaeii2_10874_02_5fe0e1ead2f25.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="image-box-text">
+        <h2>Plaza de Santa Marta</h2>
+        <p>Encanto medieval junto a palacios e iglesia histórica</p>
+      </div>
+    </div>
+  </div>
+
+ <!-- Botones -->
+<div style="text-align: center; margin-top: 20px;">
+  <button class="btn btn-toggle btn-view-all">
+    Ver más
+  </button>
+  <button class="btn btn-toggle btn-view-less" style="display: none;">
+    Ver menos
+  </button>
+</div>
+
+  <!-- Texto de reserva -->
+  <div id="reservaPromo" style="display: none; text-align: center; margin-top: 25px; font-size: 1.1em;">
+    <p style="color: white;">
+      ¿Quieres visitar todo esto?
+      <a href="reservas.html" style="font-weight: bold; color: #00bfff; text-decoration: underline;">
+        Haz una reserva de nuestros mejores tours por Cáceres
+      </a>
+    </p>
+  </div>
+</section>
+
+
+
+           
+
+
+
+      <section class="video-section" style="display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem; gap: 2rem; text-align: center;">
+
+  <div class="main-text">
+    <h2>Sobre nosotros</h2>
+    <h1>Sensaciones<span> I</span>nolvidables</h1>
+    <p>La experiencia Cáceres es una forma única de descubrir los rincones más emblemáticos...</p>
+  </div>
+
+  <div class="video-wrapper" style="width: 130%; max-width: 1100px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <video autoplay loop muted playsinline style="width: 100%; height: auto; display: block;">
+      <source src="./images/" type="video/mp4" />
+      Tu navegador no soporta el video HTML5.
+    </video>
+  </div>
+
+</section>
         <!-- Hoteles, turismo y gastronomía -->
 
         <section class="tour" id="tour">
@@ -551,6 +605,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
 </script> 
+
+<!-- Script para mostrar/ocultar lugares -->
+<script>
+  const verMasBtn = document.querySelector('.btn-view-all');
+  const verMenosBtn = document.querySelector('.btn-view-less');
+  const extraPlaces = document.querySelectorAll('.extra-place');
+  const reservaPromo = document.getElementById('reservaPromo');
+
+  verMasBtn.addEventListener('click', function () {
+    extraPlaces.forEach(el => el.style.display = 'block');
+    verMasBtn.style.display = 'none';
+    verMenosBtn.style.display = 'inline-block';
+    reservaPromo.style.display = 'block';
+  });
+
+  verMenosBtn.addEventListener('click', function () {
+    extraPlaces.forEach(el => el.style.display = 'none');
+    verMasBtn.style.display = 'inline-block';
+    verMenosBtn.style.display = 'none';
+    reservaPromo.style.display = 'none';
+  });
+</script>
 
 
 
