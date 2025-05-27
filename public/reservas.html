@@ -4,32 +4,457 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reservar Servicio</title>
-  <link rel="stylesheet" href="/sass/style.css"> <!-- Tu CSS, si usas uno -->
+  <link rel="stylesheet" href="./sass/style.css">
+  <style>
+
+    .btn-map {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+  .reserva-form {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  background: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #000; /* Esto asegura que el texto sea negro */
+}
+
+.reserva-form label {
+  font-weight: bold;
+  color: #000; /* Letras negras */
+  margin-top: 0.5rem;
+}
+
+.reserva-form input,
+.reserva-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  color: #000; /* Texto dentro del input en negro */
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: hsl(167, 82%, 65%);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  
+  margin-top: 2rem;
+}
+
+.btn-volver:hover {
+  background-color: hsl(167, 82%, 55%);
+}
+
+
+
+  </style>
 </head>
 <body>
-  <section class="reserva">
-    <h1>Haz tu reserva</h1>
 
-    <form id="formReserva">
-      <label for="servicio_id">Selecciona un servicio:</label>
-      <select id="servicio_id" name="servicio_id" required>
-        <option value="1">Tour por Cáceres</option>
-        <option value="2">Tour Juego de Tronos</option>
-        <option value="3">Menú en Restaurante</option>
-        <option value="4">Entrada a Museo</option>
-        <!-- Puedes cargar esto dinámicamente con fetch también -->
-      </select>
+    <a href="index.html" class="btn-volver">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+       viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 19l-7-7 7-7" />
+  </svg>
+  Volver al inicio
+</a>
 
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" name="fecha" required />
+  <section class="tour" id="tour">
+    <div class="main-text">
+      <h2>Lo que estabas buscando...</h2>
+      <h1>Nuestros mejores tours, hoteles y restaurantes</h1>
+    </div>
 
-      <label for="cantidad">Cantidad:</label>
-      <input type="number" id="cantidad" name="cantidad" min="1" max="6" value="1" required />
+    <div class="main-container">
 
-      <button type="submit" id="botonReservar">Reservar</button>
+      <!-- CARD EJEMPLO 1 -->
+     <div class="tour-cards" data-servicio-id="1">
+  <div class="image-box">
+    <img src="https://y.cdrst.com/foto/hotel-sf/1213fdbb/granderesp/foto-hotel-1213f311.jpg" alt="hotel1">
+    <div class="overlay"></div>
+    <div class="image-box-text">
+      <h2>Gran Hotel Don Manuel</h2>
+      <p>Hotel elegante</p>
+    </div>
+  </div>
+  <div class="tour-cards-text">
+    <h1>Gran Hotel Don Manuel</h1>
+    <p>El Gran Hotel Don Manuel es un elegante hotel de 4 estrellas situado en el corazón de Cáceres, a tan solo 300 metros de la Plaza Mayor y del conjunto histórico declarado Patrimonio de la Humanidad por la UNESCO. Su ubicación privilegiada permite a los huéspedes explorar fácilmente los principales atractivos turísticos de la ciudad.</p>
+
+    <button type="button" class="btn-map btn-reservar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>Reservar</span>
+   </button>
+
+    <form class="reserva-form">
+      <label for="fecha">Escoge una fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="cantidad">Número de personas (máx 6):</label>
+      <input type="number" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit" style="padding: 0.75rem; font-size: 1rem;">Completar reserva</button>
     </form>
+
+    <div class="price">
+      <p>150€ <span>Por persona</span></p>
+      <h2>Un fin de semana</h2>
+    </div>
+  </div>
+</div>
+
+      <!-- CARD 2 -->
+     <div class="tour-cards" data-servicio-id="2">
+  <div class="image-box">
+    <img src="https://static.hoteltreats.com/site/styles/hero/s3/2022-03/Spa%20HPA.jpg?h=4b1b1ab4&itok=p7iCO3v4" alt="hotel2">
+    <div class="overlay"></div>
+    <div class="image-box-text">
+      <h2>Hotel Hospes Palacio de Arenales</h2>
+      <p>Sofisticado, con spa y restaurante</p>
+    </div>
+  </div>
+  <div class="tour-cards-text">
+    <h1>Hotel Hospes Palacio de Arenales & Spa Cáceres</h1>
+    <p>El Hotel Hospes Palacio de Arenales & Spa es un exclusivo alojamiento de 5 estrellas ubicado a tan solo 5 km del centro histórico de Cáceres, en un entorno natural rodeado de olivos centenarios. Este palacio del siglo XVII, antigua residencia de verano de la noble familia Golfín, ha sido cuidadosamente restaurado para ofrecer una experiencia de lujo y bienestar en plena naturaleza.</p>
+
+    <button type="button" class="btn-map btn-reservar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>Reservar</span>
+    </button>
+
+    <form class="reserva-form">
+      <label for="fecha">Escoge una fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="cantidad">Número de personas (máx 6):</label>
+      <input type="number" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit">Completar reserva</button>
+    </form>
+
+    <div class="price">
+      <p>220€ <span>Por persona</span></p>
+      <h2>Un finde de escapada</h2>
+    </div>
+  </div>
+</div>
+
+      <!-- CARD 3 -->
+      <div class="tour-cards" data-servicio-id="3">
+  <div class="image-box">
+    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/Oficina%20de%20Turismo.jpg?itok=U7JyaX7-" alt="oficina-turismo">
+    <div class="overlay"></div>
+    <div class="image-box-text">
+      <h2>Oficina de turismo</h2>
+      <p>Visita lo mejor de Cáceres</p>
+    </div>
+  </div>
+  <div class="tour-cards-text">
+    <h1>Oficina de turismo de Cáceres</h1>
+    <p>La Oficina Municipal de Turismo de Cáceres es el punto de partida ideal para descubrir esta ciudad Patrimonio de la Humanidad. Ubicada en la Plaza Mayor, 1, junto al emblemático Arco de la Estrella, ofrece información detallada sobre monumentos, rutas, eventos culturales, gastronomía y naturaleza en Cáceres y su provincia.</p>
+
+     <button type="button" class="btn-map btn-reservar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>Reservar</span>
+    </button>
+
+    <form class="reserva-form">
+      <label for="fecha">Escoge una fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="cantidad">Número de personas (máx 6):</label>
+      <input type="number" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit">Completar reserva</button>
+    </form>
+
+    <div class="price">
+      <p>15€ <span>Por persona</span></p>
+      <h2>Recorrido por el casco histórico</h2>
+    </div>
+  </div>
+</div>
+
+
+<!-- CARD 4 -->
+
+  <div class="tour-cards" data-servicio-id="4">
+  <div class="image-box">
+    <img src="https://www.granhoteldonmanuel.com/wp-content/uploads/2020/04/juegodetronos-caceres.jpg">
+    <div class="overlay"></div>
+    <div class="image-box-text">
+      <h2>Free Tour</h2>
+      <p>¿Te gusta Juego de Tronos?</p>
+    </div>
+  </div>
+  <div class="tour-cards-text">
+    <h1> Free Tour: Cáceres y el legado de Juego de Tronos</h1>
+    <p>Descubre la magia de Poniente sin salir de Cáceres. En este recorrido gratuito te llevaremos por las calles y rincones que sirvieron de escenario para Desembarco del Rey, una de las ciudades más emblemáticas de la serie Juego de Tronos.
+
+Pasea por el casco antiguo, declarado Patrimonio de la Humanidad, mientras revives las escenas que protagonizaron personajes como Jaime Lannister o Euron Greyjoy. Nuestro guía local te mostrará los secretos del rodaje, curiosidades de la producción y te contará cómo Cáceres se transformó en un plató medieval de fama internacional.
+
+Una experiencia imprescindible para fans de la serie y amantes de la historia y la arquitectura.
+
+🕑 Duración: 1h 30min</p>
+
+     <button type="button" class="btn-map btn-reservar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>Reservar</span>
+    </button>
+
+    <form class="reserva-form">
+      <label for="fecha">Escoge una fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="cantidad">Número de personas (máx 6):</label>
+      <input type="number" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit">Completar reserva</button>
+    </form>
+
+    <div class="price">
+      <p>Gratis <span>Por 0€!</span></p>
+      <h2>Recorrido por el casco histórico</h2>
+    </div>
+  </div>
+</div>
+
+
+<!-- CARD 5 -->
+
+ <div class="tour-cards" data-servicio-id="5">
+  <div class="image-box">
+    <img src="https://atriocaceres.com/wp-content/uploads/2023/08/reservas-rest-atrio-3estrellas.jpg">
+    <div class="overlay"></div>
+    <div class="image-box-text">
+      <h2>Restaurante Atrio</h2>
+      <p>Alta cocina con 2 estrellas Michelin</p>
+    </div>
+  </div>
+  <div class="tour-cards-text">
+    <h1>Restaurante Atrio – Cáceres</h1>
+    <p>Ubicado en el corazón del casco antiguo de Cáceres, el Restaurante Atrio es una joya gastronómica galardonada con dos estrellas Michelin. Su cocina de autor, liderada por el chef Toño Pérez, combina tradición extremeña con una ejecución moderna y elegante. Una experiencia única para los amantes de la alta gastronomía en un entorno sofisticado e íntimo.</p>
+
+     <button type="button" class="btn-map btn-reservar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>Reservar</span>
+    </button>
+
+    <form class="reserva-form">
+      <label for="fecha">Escoge una fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="cantidad">Número de personas (máx 6):</label>
+      <input type="number" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit">Completar reserva</button>
+    </form>
+
+    <div class="price">
+      <p>250€ <span>Por persona</span></p>
+      <h2>Menú degustación gourmet</h2>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 5 -->
+
+<div class="tour-cards" data-servicio-id="5">
+  <div class="image-box">
+    <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/6e1008d60aed4964ace79d70e0f815d0.jpeg?width=1000">
+    <div class="overlay"></div>
+    <div class="image-box-text">
+      <h2>Restaurante Torre de Sande</h2>
+      <p>Cocina tradicional en un entorno histórico</p>
+    </div>
+  </div>
+  <div class="tour-cards-text">
+    <h1>Restaurante Torre de Sande – Cáceres</h1>
+    <p>Situado en una torre medieval del siglo XV, el Restaurante Torre de Sande ofrece una experiencia gastronómica que combina la cocina tradicional extremeña con un ambiente histórico y acogedor. Bajo la dirección del chef Toño Pérez, también responsable del reconocido Atrio, este restaurante es ideal para quienes buscan una comida relajada sin renunciar a la calidad y el sabor auténtico de la región.</p>
+
+     <button type="button" class="btn-map btn-reservar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>Reservar</span>
+    </button>
+
+    <form class="reserva-form">
+      <label for="fecha">Escoge una fecha:</label>
+      <input type="date" name="fecha" required />
+
+      <label for="cantidad">Número de personas (máx 6):</label>
+      <input type="number" name="cantidad" min="1" max="6" value="1" required />
+
+      <button type="submit">Completar reserva</button>
+    </form>
+
+    <div class="price">
+      <p>50€ <span>Por persona</span></p>
+      <h2>Menú degustación tradicional</h2>
+    </div>
+  </div>
+</div>
+
+
+
   </section>
 
-  <script src="/js/reserva.js"></script>
+
+
+   <!-- footer -->
+    <footer>
+        <div class="footer-image">
+            <div class="overlay1"></div>
+            <div class="overlay2"></div>
+
+        </div>
+        <div class="main-container">
+            <div class="heading-foo">
+                <img src="public/images/logo/logo-caceres.png" alt="">
+                <h1>Geo Caceres</h1>
+                <p>Visita lo mejor de Cáceres, no te arrepentirás</p>
+            </div>
+            <div class="social-media">
+                <h1>Nuestras redes sociales</h1>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <h1>Enlaces a la web</h1>
+                <ul>
+                    <li><a href="#explore">Inicio</a></li>
+                    <li><a href="#tour">¿Que visitar?</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#asistente">Asistente Virtual</a></li>
+                    <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h1>Contacto</h1>
+                <div class="contact-info-text">
+                    <p>+34 677 99 82 33/p>
+                    <p>geocaceres@ayuda.com</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+    </footer>
+
+  <script>
+    // Simula el ID de usuario logueado
+    const usuario_id = 1;
+
+    // Mostrar el formulario al hacer clic en "Reservar"
+    document.querySelectorAll('.btn-reservar').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const form = btn.nextElementSibling;
+        form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+      });
+    });
+
+    // Capturar el submit de cada formulario
+    document.querySelectorAll('.reserva-form').forEach((form) => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const servicio_id = form.closest('.tour-cards').dataset.servicioId;
+        const fecha = form.querySelector('input[name="fecha"]').value;
+        const cantidad = form.querySelector('input[name="cantidad"]').value;
+
+        try {
+          const res = await fetch('/api/reservas', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ usuario_id, servicio_id, fecha, cantidad })
+          });
+
+          const data = await res.json();
+          alert(data.message);
+          form.style.display = 'none';
+        } catch (err) {
+          console.error('❌ Error:', err);
+          alert('Error al hacer la reserva.');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
