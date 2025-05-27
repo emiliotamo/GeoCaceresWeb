@@ -78,7 +78,8 @@ li {
   transform: translateX(600px);
 }
 
-.btn-view-all {
+.btn-view-all,
+.btn-view-less {
   position: relative;
   cursor: pointer;
   outline: none;
@@ -91,7 +92,8 @@ li {
   transition: all 500ms ease-in-out;
 }
 
-.btn-view-all::after {
+.btn-view-all::after,
+.btn-view-less::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -102,7 +104,8 @@ li {
   background-color: hsl(167, 82%, 65%);
 }
 
-.btn-view-all::before {
+.btn-view-all::before,
+.btn-view-less::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -113,7 +116,8 @@ li {
   background-color: hsl(167, 82%, 65%);
 }
 
-.btn-view-all:hover {
+.btn-view-all:hover,
+.btn-view-less:hover {
   background-color: hsl(167, 82%, 65%);
   color: hsl(198, 100%, 6%);
 }
@@ -222,6 +226,8 @@ li {
   width: 100%;
   height: 50px;
 }
+
+
 
 .image-box {
   cursor: pointer;
@@ -382,6 +388,18 @@ li {
   transform: rotate(-405deg);
 }
 
+#authContainer a {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 500ms ease-in-out;
+  text-decoration: none;
+}
+
+#authContainer a:hover {
+  color: hsl(167, 82%, 65%);
+}
+
 .banner {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1673467340628-2X7S5T9QYH41UK8NC1C2/que-ver-en-caceres.jpg?format=1500w");
@@ -440,6 +458,9 @@ li {
   height: 100%;
   padding: 4rem 2rem;
 }
+
+
+
 
 .explore .main-container {
   display: grid;
@@ -1108,5 +1129,23 @@ input[type=text], input[type=password] {
 .mensaje-estado.success {
   color: green;
 }
+#authContent {
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#authContent a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+
+
 
 /*# sourceMappingURL=style.css.map */
