@@ -19,6 +19,25 @@ router.post('/register', async (req, res) => {
   const { name, username, email, phone, password } = req.body;
 
   try {
+    // Verifica duplicados
+    const checkUser = await db.query(
+      'SELECT * FROM usuarios WHERE username = $1 OR email = $2 OR phone = $3',
+      [username, email, phone]
+    );
+
+    if (checkUser.rows.length > 0) {
+      const existing = checkUser.rows[0];
+      if (existing.username === username) {
+        return res.status(400).json({ message: '❌ El nombre de usuario ya está en uso.' });
+      }
+      if (existing.email === email) {
+        return res.status(400).json({ message: '❌ El correo electrónico ya está registrado.' });
+      }
+      if (existing.phone === phone) {
+        return res.status(400).json({ message: '❌ El número de teléfono ya está registrado.' });
+      }
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
 
     await db.query(
@@ -27,6 +46,7 @@ router.post('/register', async (req, res) => {
     );
 
     res.json({ message: '✅ Usuario registrado correctamente' });
+
   } catch (err) {
     console.error('❌ Error al registrar usuario:', err);
     res.status(500).json({ message: 'Error al registrar usuario' });
