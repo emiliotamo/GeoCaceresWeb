@@ -14,7 +14,8 @@
         rel="stylesheet">
     <!-- css  -->
     <link rel="stylesheet" href="./sass/style.css">
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
+
 
 </head>
 
@@ -368,65 +369,71 @@
 
 
         <!-- ----- -->
-        <!-- Imagenes -->
-
-        <section class="media" id="media">
-            <div class="main-text">
-                <h2>Media</h2>
-                <h1>Cáceres en fotos</h1>
-            </div>
-            <div class="main-container">
-                <div class="image image-1">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/C%C3%A1ceres_-_Arco_de_la_Estrella_-_DSC_1923_W.JPG" alt="Arco de la Estrella">
-                    <h3>Arco de la Estrella</h3>
-                </div>
-                <div class="image image-2">
-                    <img src="https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/extremadura/casa_golfines_abajo_caceres_c_villorejo_s_1248015055.jpg" alt="Palacio de los Golfines ">
-                    <h3>Palacio de los Golfines</h3>
-                </div>
-                <div class="image image-3">
-                    <img src="https://www.extremadura.com/uploads/guide/guide/logo/5577ed866c6f63164a750f00/large_plaza-de-san-jorge.jpeg" alt="Plaza de San Jorge">
-                    <h3>Plaza de San Jorge</h3>
-                </div>
-                <div class="image image-4">
-                    <img src="https://lh4.googleusercontent.com/proxy/GSKx_iNSfKs-xkP4_nG7RGVaPklUCpAfYgBq6doyaTaxBYNsurKM2LhqLMXv6Y32q425fK2euWwX4FoQ5UCm1WjwPU5DZYJc0ej64megRKdYGMzsV9VcsvC1JYNT" alt="Museo de Cáceres">
-                    <h3>Museo de Cáceres</h3>
-                </div>
-                <div class="image image-5">
-                    <img src="https://avuelapluma.es/wp-content/uploads/2019/12/barriojudio.jpg" alt="Barrio Judio">
-                    <h3>Barrio Judio</h3>
-                </div>
-                <div class="image image-6">
-                    <img src="https://turismo.caceres.es/sites/default/files/multimedia/_S4A0436.jpg" alt=" Centro de Artes Visuales ">
-                    <h3>Centro de Artes Visuales</h3>
-                </div>
-                <div class="image image-7">
-                    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Parque%20del%20Pr%C3%ADncipe%2011.jpg?itok=g1JXBi1S&sc=613662f4075ba3f3d825c4cc96951735" alt="Parque del Príncipe">
-                    <h3>Parque del Príncipe</h3>
-                </div>
-                <div class="image image-8">
-                    <img src="https://www.extremaduramisteriosa.com/sites/default/files/virgendelamontana1.jpg" alt="Virgen de la Montana">
-                    <h3>Virgen de la Montana</h3>
-                </div>
-                <div class="image image-9">
-                    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Concatedral%20de%20C%C3%A1ceres%20y%20museo%20catedralicio%20163.jpg?itok=DlUKM_VX&sc=87aa53221020a7ba6c089c8d35c317c4" alt="Estatua de San Pedro de Alcántara">
-                    <h3>Estatua de San Pedro de Alcántara</h3>
-                </div>
-                <div class="image image-10">
-                    <img src="https://caceres.vectalia.es/wp-content/uploads/sites/6/2018/08/AdobeStock_61356439.jpeg" alt="Palacio Episcopal">
-                    <h3>Palacio Episcopal</h3>
-                </div>
-                <div class="image image-11">
-                    <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Foro%20de%20los%20Balbos.jpg?itok=zdLbj0uh&sc=e25e2aab352b1f64127a33f52c545372" alt="Foro de los Balbos">
-                    <h3>Foro de los Balbos</h3>
-                </div>
-                <div class="image image-12">
-                    <img src="https://mycities.es/public/data/images/originals/6474cfad57161-dp-110375772-848.jpg" alt="Iglesia de San Mateo">
-                    <h3>Iglesia de San Mateo</h3>
-                </div>
-            </div>
-        </section>
-        
+      <!-- Imagenes -->
+<section class="media" id="media">
+    <div class="main-text">
+      <h2>Aun hay más</h2>
+      <h1>Todo lo que puedes visitar por tu cuenta</h1>
+    </div>
+    <div class="main-container">
+      <div class="image image-1" data-description="Uno de los accesos principales al casco antiguo, de origen medieval.">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/C%C3%A1ceres_-_Arco_de_la_Estrella_-_DSC_1923_W.JPG" alt="Arco de la Estrella">
+        <h3>Arco de la Estrella</h3>
+      </div>
+      <div class="image image-2" data-description="Residencia de una de las familias nobles más influyentes, mezcla estilos gótico y renacentista.">
+        <img src="https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/extremadura/casa_golfines_abajo_caceres_c_villorejo_s_1248015055.jpg" alt="Palacio de los Golfines">
+        <h3>Palacio de los Golfines</h3>
+      </div>
+      <div class="image image-3" data-description="Plaza empedrada donde se encuentra la iglesia de San Francisco Javier, punto clave de la ciudad.">
+        <img src="https://www.extremadura.com/uploads/guide/guide/logo/5577ed866c6f63164a750f00/large_plaza-de-san-jorge.jpeg" alt="Plaza de San Jorge">
+        <h3>Plaza de San Jorge</h3>
+      </div>
+      <div class="image image-4" data-description="Museo regional con secciones de arqueología, etnografía y arte contemporáneo.">
+        <img src="https://lh4.googleusercontent.com/proxy/GSKx_iNSfKs-xkP4_nG7RGVaPklUCpAfYgBq6doyaTaxBYNsurKM2LhqLMXv6Y32q425fK2euWwX4FoQ5UCm1WjwPU5DZYJc0ej64megRKdYGMzsV9VcsvC1JYNT" alt="Museo de Cáceres">
+        <h3>Museo de Cáceres</h3>
+      </div>
+      <div class="image image-5" data-description="Antiguo barrio judío de calles estrechas y encanto medieval.">
+        <img src="https://avuelapluma.es/wp-content/uploads/2019/12/barriojudio.jpg" alt="Barrio Judio">
+        <h3>Barrio Judio</h3>
+      </div>
+      <div class="image image-6" data-description="Espacio dedicado al arte contemporáneo situado en un antiguo convento.">
+        <img src="https://turismo.caceres.es/sites/default/files/multimedia/_S4A0436.jpg" alt="Centro de Artes Visuales">
+        <h3>Centro de Artes Visuales</h3>
+      </div>
+      <div class="image image-7" data-description="Gran parque urbano con jardines, esculturas y zonas para caminar.">
+        <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Parque%20del%20Pr%C3%ADncipe%2011.jpg?itok=g1JXBi1S&sc=613662f4075ba3f3d825c4cc96951735" alt="Parque del Príncipe">
+        <h3>Parque del Príncipe</h3>
+      </div>
+      <div class="image image-8" data-description="Santuario situado en un mirador con vistas a la ciudad.">
+        <img src="https://www.extremaduramisteriosa.com/sites/default/files/virgendelamontana1.jpg" alt="Virgen de la Montana">
+        <h3>Virgen de la Montana</h3>
+      </div>
+      <div class="image image-9" data-description="Monumento dedicado al patrón de Extremadura.">
+        <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Concatedral%20de%20C%C3%A1ceres%20y%20museo%20catedralicio%20163.jpg?itok=DlUKM_VX&sc=87aa53221020a7ba6c089c8d35c317c4" alt="Estatua de San Pedro de Alcántara">
+        <h3>Estatua de San Pedro de Alcántara</h3>
+      </div>
+      <div class="image image-10" data-description="Sede del obispado de la diócesis de Coria-Cáceres, con arquitectura renacentista.">
+        <img src="https://caceres.vectalia.es/wp-content/uploads/sites/6/2018/08/AdobeStock_61356439.jpeg" alt="Palacio Episcopal">
+        <h3>Palacio Episcopal</h3>
+      </div>
+      <div class="image image-11" data-description="Espacio abierto en el centro histórico donde se celebraban actos públicos en la época romana.">
+        <img src="https://turismo.caceres.es/sites/default/files/styles/simplecrop__16_9_/public/recurso_poi/Foro%20de%20los%20Balbos.jpg?itok=zdLbj0uh&sc=e25e2aab352b1f64127a33f52c545372" alt="Foro de los Balbos">
+        <h3>Foro de los Balbos</h3>
+      </div>
+      <div class="image image-12" data-description="Iglesia gótica del siglo XIV con gran importancia histórica y arquitectónica.">
+        <img src="https://mycities.es/public/data/images/originals/6474cfad57161-dp-110375772-848.jpg" alt="Iglesia de San Mateo">
+        <h3>Iglesia de San Mateo</h3>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
 
         <!-- ----- -->
 
@@ -441,19 +448,32 @@
             </div>
             <div class="main-container">
                 <form action="#">
-                    <div class="name">
+                    <div class="name" id="contact-name">
                         <label for="name">Nombre</label>
                         <input type="text" placeholder="Introduce tu nombre " id="name" name="name">
                     </div>
-                    <div class="phone">
+                    <div class="phone" id="contact-email">
                         <label for="phone">Email</label>
                         <input type="text" name="phone" id="phone" placeholder="Introduce tu email">
                     </div>
+                    
                     <div class="message">
                         <label for="message">Tu mensaje</label>
                         <textarea name="message" id="message" cols="30" rows="10"
                             placeholder="Haznos saber tu mensaje"></textarea>
                     </div>
+
+                    <div class="rating" id="rating-stars" style="margin-top: 10px;">
+                        <label>Valora la web:</label>
+                        <div style="font-size: 1.5rem;">
+                            <span class="star" data-value="1">&#9734;</span>
+                            <span class="star" data-value="2">&#9734;</span>
+                            <span class="star" data-value="3">&#9734;</span>
+                            <span class="star" data-value="4">&#9734;</span>
+                            <span class="star" data-value="5">&#9734;</span>
+                        </div>
+                    </div>
+                    
                     <button class="btn-send">
                         Send
                     </button>
@@ -560,16 +580,17 @@
         const data = await res.json();
     
         if (res.ok) {
-          // Guardar el usuario en localStorage
-          localStorage.setItem("usuario", JSON.stringify({
-            id: data.user_id,
-            username: data.username,
-            name: data.name
-          }));
-    
-          alert("✅ Sesión iniciada correctamente");
-          document.getElementById('loginModal').style.display = 'none';
-        } else {
+  // Guardar el usuario en localStorage
+  localStorage.setItem("usuario", JSON.stringify({
+    id: data.user_id,
+    username: data.username,
+    name: data.name
+  }));
+
+  // Recargar la página para aplicar cambios visuales
+  location.reload();
+}
+ else {
           alert("❌ " + data.message);
         }
       } catch (error) {
@@ -580,31 +601,56 @@
       return false;
     }
     </script>
+<script>
+    function logoutUser() {
+      localStorage.removeItem("usuario");
+      location.reload(); // Refresca para volver al modo no logueado
+    }
+  
+    function showLoginModal() {
+      document.getElementById("loginModal").style.display = "block";
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      const userData = localStorage.getItem("usuario");
+      if (!userData) return; // Si no hay usuario guardado, salir
+  
+      const user = JSON.parse(userData);
+  
+      // Cambiar el contenido del header
+      const authContent = document.getElementById("authContent");
+      if (authContent) {
+        authContent.innerHTML = `
+          <strong>${user.username}</strong> /
+          <a href="#" onclick="logoutUser()">Cerrar sesión</a>
+        `;
+      }
+  
+      // Ocultar los campos nombre y email en el formulario de contacto
+      const nameField = document.getElementById('contact-name');
+      const emailField = document.getElementById('contact-email');
+      if (nameField) nameField.style.display = 'none';
+      if (emailField) emailField.style.display = 'none';
+  
+      // Activar estrellas de valoración
+      document.querySelectorAll('.star').forEach(star => {
+        star.addEventListener('click', function () {
+          const value = parseInt(this.getAttribute('data-value'));
+          document.querySelectorAll('.star').forEach(s => {
+            s.innerHTML = s.getAttribute('data-value') <= value ? '★' : '☆';
+          });
+          console.log("Valoración dada: " + value);
+        });
+      });
+    });
+  </script>
+  
 
 <script>
-
-//login
-document.addEventListener("DOMContentLoaded", () => {
-  const user = JSON.parse(localStorage.getItem("usuario"));
-  const authContent = document.getElementById("authContent");
-
-  if (user && user.username) {
-    authContent.innerHTML = `
-      <strong>${user.username}</strong> /
-      <a href="#" onclick="logoutUser()">Cerrar sesión</a>
-    `;
-  }
-});
-  function logoutUser() {
-    localStorage.removeItem("usuario");
-    location.reload(); // Refresca para volver al modo "no logueado"
-  }
-  
-  function showLoginModal() {
-    document.getElementById("loginModal").style.display = "block";
-  }
-  
-</script> 
+    function showLoginModal() {
+      document.getElementById("loginModal").style.display = "block";
+    }
+  </script>
 
 <!-- Script para mostrar/ocultar lugares -->
 <script>
@@ -628,6 +674,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
+<!-- Imagenes con modal -->
+
+<script>
+    document.querySelectorAll('.image').forEach(imageDiv => {
+      imageDiv.addEventListener('click', () => {
+        const description = imageDiv.getAttribute('data-description');
+        document.getElementById('modalText').textContent = description;
+        document.getElementById('imageModal').style.display = 'block';
+      });
+    });
+  
+    document.querySelector('.close-btn').addEventListener('click', () => {
+      document.getElementById('imageModal').style.display = 'none';
+    });
+  
+    window.addEventListener('click', (event) => {
+      if (event.target === document.getElementById('imageModal')) {
+        document.getElementById('imageModal').style.display = 'none';
+      }
+    });
+  </script>
 
 
 </body>
